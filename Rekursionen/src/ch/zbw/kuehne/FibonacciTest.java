@@ -8,8 +8,16 @@ public class FibonacciTest {
 
 	@Test
 	public void testFibonacci() {
-		assertEquals(5*4*3*2*1, Fibonacci.Fibonacci(5))
-		;
+		assertEquals(5, Fibonacci.Fibonacci(5));
 	}
 
+	@Test
+	public void testFibonacci2() {
+		assertEquals(55, Fibonacci.Fibonacci(10));
+	}
+	
+	@Test
+	public void testFibonacci3() {
+		assertEquals(1, Fibonacci.Fibonacci(1));
+	}
 }
