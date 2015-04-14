@@ -10,7 +10,7 @@ public class HanoiTest {
 	public void testHanoi() {
 		//fail("Not yet implemented");
 		
-		assertEquals(3, Hanoi.ZeitZumVerschieben(2, 'A', 'B', 'C'));
+		assertEquals(7, Hanoi.ZeitZumVerschieben(3, 'A', 'B', 'C'));
 		
 	}
 
