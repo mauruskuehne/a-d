@@ -16,7 +16,7 @@ public class Kochkurve {
 
 	void zeichne()
 	{
-		zeichneDing(450);
+		zeichneDing(400);
 		
 		/*
 		tu.hideTurtle(); 	      // Turtle unsichtbar
@@ -33,7 +33,7 @@ public class Kochkurve {
 		tu.forward(20);				// zeichne 20 Einheiten vorwärts*/
 	}
 	
-	void zeichneDing(int width)
+	void zeichneDing(float width)
 	{
 		if(width < 10)
 		{
