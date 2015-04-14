@@ -16,7 +16,7 @@ public class Kochkurve {
 
 	void zeichne()
 	{
-		zeichneDing(400);
+		zeichneDing(450);
 		
 		/*
 		tu.hideTurtle(); 	      // Turtle unsichtbar
