@@ -4,8 +4,8 @@ import zbw.simpleList.*;
 
 /* ACHTUNG: Interface Liste angepasst:
  * Damit das Interface ohne Veränderung für LinkedList und ArrayList gilt,
- * geben die nachfolgenden Methoden nicht die spezifische Klasse, sondern nur
- * das Interface zurück
+ * müssen die nachfolgenden Methoden nicht die spezifische Klasse, sondern nur
+ * das Interface zurückgeben:
  * 
  * bisher:
  * public ArListe sublist(int pos1, int pos2);
@@ -120,7 +120,6 @@ public class LinkedList implements Liste {
 
 	@Override
 	public boolean change(int id1, int id2) {
-		// TODO Auto-generated method stub
 		
 		Node<Element> nodeBeforeNode1 = null;
 		Node<Element> nodeBeforeNode2 = null;
