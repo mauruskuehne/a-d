@@ -11,7 +11,8 @@ public class JUnitTestListe {
 	private Liste liste = null;
 	@Before
 	public void setUp() throws Exception {
-		liste = new ArListe();
+		//liste = new ArListe();
+		liste = new LinkedList();
 	
 	}
 
@@ -174,7 +175,7 @@ public class JUnitTestListe {
 		assertTrue(liste.insertLast(new Element(16,"Biel")));
 		assertTrue(liste.insertLast(new Element(23,"ZŸrich")));
 		
-		ArListe subList = liste.sublist(1, 3);
+		Liste subList = liste.sublist(1, 3);
 		
 		assertTrue(subList.getFirst().getId() == 2);
 		assertTrue(subList.getLast().getId() == 6);
@@ -190,7 +191,7 @@ public class JUnitTestListe {
 		assertTrue(liste.insertLast(new Element(16,"Biel")));
 		assertTrue(liste.insertLast(new Element(23,"ZŸrich")));
 		
-		ArListe subList = liste.searchElements(2, 6);
+		Liste subList = liste.searchElements(2, 6);
 		
 		assertTrue(subList.getFirst().getId() == 2);
 		assertTrue(subList.getLast().getId() == 6);
@@ -198,6 +199,6 @@ public class JUnitTestListe {
 
 		subList = liste.searchElements(200, 600);
 		
-		assertNull(subList);;
+		assertNull(subList);
 	}
 }

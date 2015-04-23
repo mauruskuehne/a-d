@@ -1,8 +1,6 @@
  
 package zbw.simpleList;
 
-import ch.zbw.kuehne.ArListe;
-
 public interface Liste {
 	
 	/**
@@ -58,11 +56,11 @@ public interface Liste {
 	/**
 	 * liefert einen Subliste der Liste zwischen pos1 und pos2; null wenn pos1 oder pos2 ausserhalb der Liste sind
 	 */
-	public ArListe sublist(int pos1, int pos2);
+	public Liste sublist(int pos1, int pos2);
 	
 	/**
 	 * Sucht alle Elemente mit dem Schlüssel >= key1 und <= key2; null wenn nichts gefunden
 	 */
-	public ArListe searchElements(int key1, int key2);
+	public Liste searchElements(int key1, int key2);
 	
 }
