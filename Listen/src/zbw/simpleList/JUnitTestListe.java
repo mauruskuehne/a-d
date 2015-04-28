@@ -12,7 +12,7 @@ public class JUnitTestListe {
 	@Before
 	public void setUp() throws Exception {
 		//liste = new ArListe();
-		liste = new LinkedList();
+		liste = new DoppeltLinkedList();
 	
 	}
 
