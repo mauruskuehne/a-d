@@ -132,6 +132,10 @@ public class JUnitTestListe {
 		assertTrue(liste.insertLast(new Element(7,"Buchs")));
 		assertTrue(liste.insertLast(new Element(16,"Biel")));
 		assertTrue(liste.insertLast(new Element(2,"ZŸrich")));
+		
+		liste.sortieren();
+		
+		liste.show();
 	}
 	
 	@Test

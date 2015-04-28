@@ -192,4 +192,10 @@ public class ArListe implements Liste {
 		return lst;
 	}
 
+	@Override
+	public void sortieren() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

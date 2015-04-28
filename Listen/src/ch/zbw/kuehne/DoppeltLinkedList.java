@@ -212,4 +212,70 @@ public class DoppeltLinkedList implements Liste {
 		return lst;
 	}
 
+	@Override
+	public void sortieren() {
+		
+		if(empty()) return;
+		
+		Node<Element> currentPosition = _head.getNext();
+		
+		while(currentPosition != null) {
+			moveToSortedPosition(currentPosition);
+
+			currentPosition = currentPosition.getNext();
+		}
+	}
+	
+	private boolean moveToSortedPosition(Node<Element> node) {
+		int id2 = node.getItem().getId();
+		System.out.println("checking node " + id2);
+		Node<Element> nodeToCheck = _head;
+		
+		while(nodeToCheck != null) {
+			if(nodeToCheck.getItem().getId() > node.getItem().getId()) {
+				int id1 = nodeToCheck.getItem().getId();
+				
+				System.out.println("move " + id2 + " before " + id1);
+				insertBefore(node, nodeToCheck);
+				return true;
+			}
+			nodeToCheck = nodeToCheck.getNext();
+		}
+		return false;
+	}
+	
+	private void insertBefore(Node<Element> nodeToInsert, Node<Element> newNextNode) {
+			
+		Node<Element> oldLast = nodeToInsert.getLast();
+		Node<Element> oldNext = nodeToInsert.getNext();
+		
+		Node<Element> newLast = newNextNode.getLast();
+		Node<Element> newNext = newNextNode;
+
+		//Alte Elemente wieder verknüpfen
+		if(oldLast != null)
+			oldLast.setNext(oldNext);
+		
+		if(oldNext != null)
+			oldNext.setLast(oldLast);
+		
+		
+		if(newLast == nodeToInsert)
+			newLast = newLast.getLast();
+		
+		nodeToInsert.setLast(newLast);
+		
+		if(newLast != null)
+			newLast.setNext(nodeToInsert);
+		
+		if(newNext == nodeToInsert)
+			newNext = nodeToInsert.getNext();
+		
+		nodeToInsert.setNext(newNext);
+		
+		if(newNext != null)
+			newNext.setLast(nodeToInsert);
+		
+	}
+
 }

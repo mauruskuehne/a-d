@@ -219,4 +219,10 @@ public class LinkedList implements Liste {
 		return lst;
 	}
 
+	@Override
+	public void sortieren() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

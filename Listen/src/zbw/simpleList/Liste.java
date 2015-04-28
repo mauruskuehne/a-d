@@ -62,5 +62,7 @@ public interface Liste {
 	 * Sucht alle Elemente mit dem Schlüssel >= key1 und <= key2; null wenn nichts gefunden
 	 */
 	public Liste searchElements(int key1, int key2);
+
+	public void sortieren();
 	
 }
