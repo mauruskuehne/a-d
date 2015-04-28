@@ -122,6 +122,17 @@ public class JUnitTestListe {
 		assertTrue(liste.empty());
 
 	}
+	@Test
+	public void testSort() {
+		
+		assertTrue(liste.insertLast(new Element(4,"Chur")));
+		assertTrue(liste.insertLast(new Element(23,"Wil")));
+		assertTrue(liste.insertLast(new Element(3,"Bern")));
+		assertTrue(liste.insertLast(new Element(10,"Genf")));
+		assertTrue(liste.insertLast(new Element(7,"Buchs")));
+		assertTrue(liste.insertLast(new Element(16,"Biel")));
+		assertTrue(liste.insertLast(new Element(2,"ZŸrich")));
+	}
 	
 	@Test
 	public void testchange() {

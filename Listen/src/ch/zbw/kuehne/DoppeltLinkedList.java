@@ -20,15 +20,16 @@ import zbw.simpleList.*;
 public class DoppeltLinkedList implements Liste {
 
 	Node<Element> _head;
-	
+	Node<Element> _last;
 	
 	@Override
 	public boolean insertFirst(Element x) {
-		Node<Element> newNode = new Node<Element>(x, null);	
-		Node<Element> tail = _head;
+		Node<Element> newNode = new Node<Element>(x, _head);
+		if(_head != null)
+			_head.setLast(newNode);
 		_head = newNode;
-		_head.setNext(tail);
-		
+		if(_last == null)
+			_last = newNode;
 		return true;
 	}
 
@@ -37,16 +38,11 @@ public class DoppeltLinkedList implements Liste {
 		
 		if(_head == null) {
 			_head = new Node<Element>(x, null);
+			_last = _head;
 		} else {
-			Node<Element> element = _head;
-			while(element != null) {
-				if(element.getNext() == null) {
-					Node<Element> newNode = new Node<Element>(x, null);
-					element.setNext(newNode);
-					break;
-				}
-				element = element.getNext();
-			}
+			Node<Element> newNode = new Node<Element>(x, null, _last);
+			_last.setNext(newNode);
+			_last = newNode;
 		}
 		
 		return true;
@@ -64,15 +60,7 @@ public class DoppeltLinkedList implements Liste {
 
 	@Override
 	public Element getLast() {
-		Node<Element> element = _head;
-		while(element != null) {
-			if(element.getNext() == null) {
-				return element.getItem();
-			}
-			element = element.getNext();
-		}
-		
-		return null;
+		return _last == null? null : _last.getItem();
 	}
 
 	@Override
@@ -100,6 +88,11 @@ public class DoppeltLinkedList implements Liste {
 					lastElement.setNext(nextNode);
 				else
 					_head = nextNode;
+				
+				if(nextNode != null)
+					nextNode.setLast(lastElement);
+				else
+					_last = nextNode;
 				return true;
 			}
 			lastElement = element;
