@@ -7,6 +7,7 @@ import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;
 
+import ch.kuehne.zbw.BubbleSort;
 import ch.kuehne.zbw.StraightInsertation;
 import ch.kuehne.zbw.StraightSelection;
 
@@ -80,7 +81,7 @@ public class TestSortJUNIT {
 			}
 		}
 	}
-/*	
+
 	@Test
 	public void testBubbleSort() {
 		
@@ -105,7 +106,7 @@ public class TestSortJUNIT {
 			}
 		}
 	}
-	
+	/*	
 	@Test
 	public void testQuicksort() {
 		
