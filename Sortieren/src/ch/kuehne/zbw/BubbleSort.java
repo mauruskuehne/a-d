@@ -10,11 +10,12 @@ public class BubbleSort implements Isorter{
 			//i = Position bis wohin wir sortiert haben
 			
 			boolean didChangeAPosition = false;
+		 
 			
 			for (int j = 1; j <= i; j++) {
 				//j = nŠchste zu prŸfende Position
 				
-				//ist nŠchstes Element kleiner?
+				//ist nŠchstes Element kleiner als das vorhergehende?
 				//wenn ja, j-1 eins weiter schieben
 				if(zahlen[j] < zahlen[j - 1]) {
 					
