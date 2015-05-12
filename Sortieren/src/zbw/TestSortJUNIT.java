@@ -8,12 +8,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import ch.kuehne.zbw.BubbleSort;
+import ch.kuehne.zbw.ShellSort;
 import ch.kuehne.zbw.StraightInsertation;
 import ch.kuehne.zbw.StraightSelection;
 
 public class TestSortJUNIT {
 
-	private final int MAX=10000;
+	private final int MAX=100;
 			;
 	private int[] zahlen;
 
@@ -27,8 +28,8 @@ public class TestSortJUNIT {
 		// Zahlenwerte einfügen
 		for(int i=0; i<MAX;i++)
 		{
-//			zahlen[i] = r.nextInt(10 * MAX);
-			zahlen[i] = i;
+			zahlen[i] = r.nextInt(10 * MAX);
+//			zahlen[i] = i;
 		}
 	}
 
@@ -131,9 +132,7 @@ public class TestSortJUNIT {
 			}
 		}
 	}
-	
-	/*
-	
+	*/
 	@Test
 	public void testShellSort() {
 		
@@ -159,5 +158,4 @@ public class TestSortJUNIT {
 		}
 	}
 
-*/
 }
