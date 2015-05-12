@@ -13,11 +13,12 @@ public class ShellSort implements Isorter {
 		for(int i = 0; i < maxSteps; i++) {
 			if(i == 0) steps[i] = 1;
 			else steps[i] = (steps[i - 1] * 3) + 1;
-			System.out.println(steps[i]);
 		}
 		
 		//Jede Schrittstufe 1x ausfŸhren (step[9]er Schritte, step[8]er Schritte...
 		for(int i = maxSteps - 1; i >= 0; i--) {
+			
+			
 			for(int j = 0; j < steps[i]; j++) {
 				sortwithStep(zahlen, j, steps[i]);
 			}

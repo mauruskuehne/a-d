@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import ch.kuehne.zbw.BubbleSort;
+import ch.kuehne.zbw.Quicksort;
 import ch.kuehne.zbw.ShellSort;
 import ch.kuehne.zbw.StraightInsertation;
 import ch.kuehne.zbw.StraightSelection;
@@ -107,7 +108,7 @@ public class TestSortJUNIT {
 			}
 		}
 	}
-	/*	
+	
 	@Test
 	public void testQuicksort() {
 		
@@ -132,7 +133,7 @@ public class TestSortJUNIT {
 			}
 		}
 	}
-	*/
+	
 	@Test
 	public void testShellSort() {
 		
