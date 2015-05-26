@@ -224,5 +224,33 @@ public class LinkedList implements Liste {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public Node<Element> drehen() {
+		Node<Element> firstNode = _head;
+		if(firstNode == null) return null;
+		
+		Node<Element> lastElement = null;
+		Node<Element> tmp = firstNode;
+		
+		Node<Element> newFirst = firstNode;
+		
+		while(tmp != null) {
+			lastElement = tmp;
+			tmp = tmp.getNext();
+		}
+		
+		tmp = lastElement;
+		
+		while(newFirst != lastElement) {
+			Node<Element> tmp2 = newFirst.getNext();
+			
+			tmp.setNext(newFirst);
+			newFirst.setNext(null);
+			tmp = newFirst;
+			newFirst = tmp2;
+		}
+		
+		return lastElement;
+	}
 
 }
